@@ -1,2 +1,1 @@
-# Ustoria
-E-commerce website
+landing page 
