@@ -1,0 +1,76 @@
+.product-item {
+  position: relative;
+}
+::ng-deep .carouselCContainer .p-carousel-prev {
+  left: 50px;
+  z-index: 99;
+
+}
+::ng-deep .carouselCContainer .p-carousel-next,
+::ng-deep .carouselCContainer .p-carousel-prev
+{
+  width: 32px;
+  height: 32px;
+  border: 1px solid #eaeaea;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 30px;
+  position: absolute;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-25%);
+  -moz-transition: all 0.45s ease;
+  -webkit-transition: all 0.45s ease;
+  -o-transition: all 0.45s ease;
+  -ms-transition: all 0.45s ease;
+  transition: all 0.45s ease;
+}
+::ng-deep .carouselCContainer .p-carousel-next {
+  right: 120px;
+  z-index: 99;
+}
+
+::ng-deep .carouselCContainer:hover .p-carousel-next {
+  right: 100px;
+
+}
+::ng-deep .carouselCContainer:hover .p-carousel-prev {
+  left: 20px;
+
+}
+
+::ng-deep .carouselCContainer li.p-carousel-indicator{
+  display: flex  !important;
+}
+::ng-deep ul.p-carousel-indicators li.p-carousel-indicator button.p-link {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #999999;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+::ng-deep ul.p-carousel-indicators li.p-carousel-indicator button.p-link:hover,
+::ng-deep ul.p-carousel-indicators li.p-carousel-indicator button.p-link:focus {
+  background-color: #1bd172;
+}
+
+::ng-deep .p-ripple {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+::ng-deep .p-ripple:hover {
+  background: #5a88ca;
+  color: #fff;
+  border-color: #5a88ca;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+ 
+@media screen and (max-width:575px) {
+  ::ng-deep .carouselCContainer .p-carousel-next{
+    right: 68px !important;
+  }
+}

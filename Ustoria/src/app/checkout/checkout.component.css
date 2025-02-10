@@ -1,0 +1,25 @@
+.input-radio {
+  margin: 4px;
+  outline: none;
+}
+label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+a {
+  color: #5a88ca;
+}
+a:hover, a:focus {
+    color: #17a78b;
+}
+.btn{
+    --bs-btn-border-radius:unset;
+
+}
+.form-control{
+    width: fit-content;
+    border-radius: unset;
+}

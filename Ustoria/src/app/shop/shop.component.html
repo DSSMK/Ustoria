@@ -1,0 +1,80 @@
+<div class="product-big-title-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="product-bit-title text-center">
+                    <h2>Shop</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="single-product-area">
+    <div class="zigzag-bottom"></div>
+@defer (on viewport) {
+
+    <div class="container">
+        <div class="row">
+
+            @for (product of products; track product.id) {
+            <div class="col-md-3 col-sm-6">
+                <div class="single-shop-product">
+                    <div class="product-upper">
+                        <img [src]="product.src" [alt]="product.imageName">
+                    </div>
+                    <h2  class="text-cut"  data-bs-toggle="tooltip" data-bs-placement="top" [title]="product.name"><a routerLink="/shop/{{product.id}}">{{product.name}}</a></h2>
+                    <div class="product-carousel-price">
+                        <ins>${{product.price.toFixed(2)}}</ins> <del>${{product.discount.toFixed(2)}}</del>
+                    </div>  
+                    
+                    <div class="product-option-shop">
+                        <button class="add_to_cart_button"(click)="addToCart(product)">Add to cart</button>
+                    </div>                       
+                </div>
+            </div>
+        }
+    
+        <div class="row">
+            <div class="col-md-12 d-flex justify-content-center">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">&laquo;</span>
+                        </a>
+                      </li>
+                      <li class="page-item"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item"><a class="page-link" href="#">4</a></li>
+                      <li class="page-item"><a class="page-link" href="#">5</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                          <span aria-hidden="true">&raquo;</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+            </div>
+        </div>
+    </div>
+</div>}
+ @placeholder {
+    <p class="d-flex justify-content-center align-items-center w-3">Please wait...</p>
+} @loading (minimum 1000ms) {
+    <div class="text-center">
+    <p class="d-flex justify-content-center align-items-center w-3">Please wait...</p>
+
+        <div class="spinner-border" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+} @error {
+    <div class="d-flex justify-content-center align-items-center w-3">
+        <p>Make Sure to write a command in your cmd</p>
+        <p>json-server --watch db.json</p>
+     </div>
+
+}

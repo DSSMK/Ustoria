@@ -1,0 +1,104 @@
+header {
+    height: auto;
+  }
+  a {
+    color: #888;
+    font-size: 13px;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #17a78b;
+    text-decoration: underline;
+  }
+  ul {
+    justify-content: space-evenly;
+    padding: 10px;
+    text-align: center;
+  }
+  .row {
+    width: auto;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .row .container {
+    background: none repeat scroll 0 0 #f4f4f4;
+    justify-content: center;
+  }
+  .dropdown-toggle {
+    border: none;
+    font-size: 14px;
+    color: #888;
+  }
+  .dropdown-toggle:hover,
+  .dropdown-toggle:focus {
+    color: #17a78b;
+    text-decoration: underline;
+  }
+  .dropdown-menu a {
+    color: unset;
+    text-decoration: unset;
+  }
+  .dropdown-menu {
+    min-width: 7rem;
+    border: none;
+    box-shadow: 6px 13px 12px 0px rgba(0, 0, 0, 0.1);
+    inset: 0px auto auto 23px !important;
+    border-radius: unset;
+    padding: unset;
+  }
+  .dropdown-item:hover {
+    background-color: #f5f5f5;
+  }
+  .logo:hover {
+    text-decoration: none;
+    opacity: 0.7;
+    cursor: pointer;
+  }
+  .logo {
+    margin: 29px auto;
+    box-sizing: border-box;
+  }
+  .cart-btn {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+  }
+  .shopping-item {
+    width: fit-content;
+    height: 47px;
+    border: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding: 11px;
+    position: relative;
+  }
+  .shopping-item a {
+    font-size: 18px;
+    color: #259060;
+  }
+  .cart-amount {
+    color: #5a88ca;
+    font-weight: 700;
+  }
+  .shopping-item:hover {
+    background: none repeat scroll 0 0 #5a88ca;
+    border-color: #ca5abb;
+  }
+  .shopping-item:hover a {
+    color: #fff;
+    text-decoration: none;
+  }
+  .shopping-item:hover .cart-amount {
+    color: #fff;
+  }
+  
+  .shopping-item:hover .product-count {
+    background: none repeat scroll 0 0 #00000065;
+  }
+  @media only screen and (max-width: 767px) {
+    .nav {
+      margin-left: 0px !important;
+    }
+  }
+  

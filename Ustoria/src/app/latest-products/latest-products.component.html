@@ -1,0 +1,47 @@
+<p-carousel
+  [value]="products"
+  [numVisible]="5"
+  [numScroll]="1"
+  [responsiveOptions]="responsiveOptions"
+>
+  <ng-template let-product pTemplate="item">
+    <div
+      class="border-1 surface-border border-round m-2 text-center py-5 px-3 single-product"
+    >
+      <div
+        class="product-f-image mb-3"
+        data-bs-toggle="tooltip"
+        data-bs-placement="top"
+        [title]="product.name"
+      >
+        <img
+          [src]="product.src"
+          [alt]="product.imageName"
+          class="w-6 shadow-2"
+        />
+        <div class="product-hover">
+          <a class="add-to-cart-link" (click)="addToCart(product)"
+            ><i class="fa fa-shopping-cart"></i> Add to cart</a
+          >
+          <a
+            class="view-details-link"
+            [routerLink]="['/single-product', product.id]"
+            ><i class="fa fa-link"></i> See details</a
+          >
+        </div>
+      </div>
+      <h2
+        class="mb-1 text-cut"
+        data-bs-toggle="tooltip"
+        data-bs-placement="top"
+        [title]="product.name"
+      >
+        {{ product.name }}
+      </h2>
+      <div class="product-carousel-price">
+        <ins class="mt-0 mb-3">{{ "$" + product.price }}</ins>
+        <del>${{ product.discount }}</del>
+      </div>
+    </div>
+  </ng-template>
+</p-carousel>

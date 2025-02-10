@@ -1,0 +1,18 @@
+::ng-deep .p-carousel-indicator{
+display: none;
+}
+.add-to-cart-link{
+    cursor: pointer;
+}
+::ng-deep .single-product .p-carousel-prev {
+    position: absolute;
+    left: 70px;
+    position: absolute;
+    top: 45%;
+}
+::ng-deep .single-product .p-carousel-next{
+    position: absolute;
+    right: 70px;
+    position: absolute;
+    top: 45%;
+}

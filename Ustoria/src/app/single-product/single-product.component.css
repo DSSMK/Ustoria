@@ -1,0 +1,6 @@
+.nav-tabs{
+    --bs-nav-tabs-border-width: unset; 
+}
+ul{
+margin-bottom: -14px;
+}

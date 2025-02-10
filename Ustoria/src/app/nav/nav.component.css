@@ -1,0 +1,26 @@
+li a {
+  color: #6e6a6a;
+  font-size: 14px;
+  padding: 20px;
+  margin: 0 10px;
+  box-sizing: border-box;
+  text-transform: uppercase;
+}
+.navbar,
+.container,
+li {
+  height: auto;
+  padding: 0px;
+}
+a {
+  padding: unset;
+}
+.navbar-light .navbar-nav .nav-item.active,
+.navbar-light .navbar-nav .nav-item:hover {
+  background: #5a88ca;
+  color: #fff !important;
+}
+.navbar-light .navbar-nav .nav-item.active a,
+.navbar-light .navbar-nav .nav-item:hover a {
+  color: #fff !important;
+}
